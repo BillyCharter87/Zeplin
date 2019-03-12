@@ -6,5 +6,6 @@ import java.util.List;
 
 public interface InvoiceService {
     List<Invoice> getAllInvoices();
+    Integer getAllPastDueInvoicesCounts();
     Invoice addInvoice(Invoice invoice);
 }

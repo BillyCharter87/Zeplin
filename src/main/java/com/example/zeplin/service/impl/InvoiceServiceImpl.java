@@ -24,6 +24,12 @@ public class InvoiceServiceImpl implements InvoiceService {
     }
 
     @Override
+    public Integer getAllPastDueInvoicesCounts() {
+
+        return invoiceRepository.countAllByPastDueIsTrue();
+    }
+
+    @Override
     public Invoice addInvoice(Invoice invoice) {
 
         return invoiceRepository.save(invoice);

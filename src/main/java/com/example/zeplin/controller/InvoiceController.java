@@ -22,6 +22,11 @@ class InvoiceController {
         return invoiceService.getAllInvoices();
     }
 
+    @GetMapping("/get-all-past-due-invoices-counts")
+    public Integer getAllPastDueInvoicesCounts() {
+        return invoiceService.getAllPastDueInvoicesCounts();
+    }
+
 
     @PostMapping("/add-invoice")
     public Invoice saveContract(@RequestBody Invoice invoice) {

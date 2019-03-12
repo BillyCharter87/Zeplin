@@ -25,7 +25,7 @@ public class Invoice {
     private double amountDue;
 
     @Column(name = "contract_id")
-    private String contractId;
+    private Long contractId;
 
 
     public boolean isPastDue() {
@@ -60,11 +60,11 @@ public class Invoice {
         this.id = id;
     }
 
-    public String getContractId() {
+    public Long getContractId() {
         return contractId;
     }
 
-    public void setContractId(String contractId) {
+    public void setContractId(Long contractId) {
         this.contractId = contractId;
     }
 }

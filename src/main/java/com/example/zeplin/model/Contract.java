@@ -14,7 +14,7 @@ public class Contract {
     @GeneratedValue(generator = "id_gen")
     @GenericGenerator(name="id_gen", strategy = "increment")
     @Column(name="ID")
-    private Integer id;
+    private Long id;
 
     @Enumerated(EnumType.STRING)
     @Column(length = 30, name = "type")
@@ -32,8 +32,8 @@ public class Contract {
     public ContractType getType() { return type; }
     public void setType(ContractType type) { this.type = type; }
 
-    public Integer getId() { return id; }
-    public void setId(Integer id) { this.id = id; }
+    public Long getId() { return id; }
+    public void setId(Long id) { this.id = id; }
 
     public String getStartDate() { return startDate; }
     public void setStartDate(String startDate) { this.startDate = startDate; }
